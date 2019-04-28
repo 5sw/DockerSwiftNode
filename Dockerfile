@@ -23,6 +23,8 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true &&\
 		python2.7 \
 		apt-transport-https \
 		lsb-release \
+		libssl-dev \
+		zlib1g-dev \
 	&& curl -sL https://deb.nodesource.com/setup_11.x | bash - \
 	&& apt-get -q install -y nodejs \
     && rm -r /var/lib/apt/lists/*    
